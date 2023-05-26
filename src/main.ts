@@ -2,6 +2,7 @@ import * as core from '@actions/core';
 import * as httpClient from '@actions/http-client';
 import {getBuildInfo} from './build-info';
 
+/* eslint-disable @typescript-eslint/no-unused-vars */
 async function run(): Promise<void> {
     try {
         const buildInfo = getBuildInfo();
