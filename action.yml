@@ -1,0 +1,21 @@
+name: 'Unleash Pipeline'
+description: 'Post update to unleash pipeline'
+inputs:
+  shaMinLength:
+    description: 'Keep this number of characters from the sha'
+    default: "7"
+    required: false
+  project:
+    description: 'Name of the pipeline project'
+    required: true
+  image:
+    description: 'Docker image'
+    required: true
+  pipelineUrl:
+    description: 'The location to post the commit update to'
+    required: false
+    default: 'https://sandbox.getunleash.io/pipeline/build_info'
+  
+runs:
+  using: 'node16'
+  main: 'dist/index.js'
